@@ -1,0 +1,12 @@
+** finish() **
+Purpose: Closes the current Activity.
+Behavior: Removes the Activity from the Activity stack and destroys it. If this Activity was started by another Activity, the previous Activity is resumed.
+
+** finishAffinity() **
+Purpose: Closes the current Activity and all Activities below it in the current task that have the same affinity.
+Behavior: Useful when you want to clear the entire task and go back to the home screen or a different task.
+Example:
+
+** finishActivity(int requestCode) **
+Purpose: Closes an Activity that was started using startActivityForResult().
+Behavior: You pass the requestCode that was used when starting the Activity. This allows you to target a specific Activity to close.
