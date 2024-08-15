@@ -1,0 +1,404 @@
+{
+  "tweets": [
+    {{},
+      "category": "Wesbos",
+      "text": "Pro tip: Clean code is like a good joke – it doesn’t need an explanation. #CodeBetter"
+    },
+    {
+      "category": "Wesbos",
+      "text": "JavaScript: The language you love to hate and hate to love. #webdev"
+    },
+    {
+      "category": "Wesbos",
+      "text": "Your code isn’t working? Try turning it off and on again. #devlife"
+    },
+    {
+      "category": "Wesbos",
+      "text": "CSS: Where 1px off can ruin your entire day. #frontend"
+    },
+    {
+      "category": "Wesbos",
+      "text": "Debugging: Being the detective in a crime movie where you are also the murderer. #developerHumor"
+    },
+    {
+      "category": "Wesbos",
+      "text": "Writing code is easy. Writing good code is hard. Writing maintainable code is an art. #CodeArt"
+    },
+    {
+      "category": "Wesbos",
+      "text": "The best debugger in the world is a good night’s sleep. #devtips"
+    },
+    {
+      "category": "Wesbos",
+      "text": "Learning to code is like learning a new language – except with more semicolons. #CodeNewbie"
+    },
+    {
+      "category": "Wesbos",
+      "text": "Your future self will thank you for writing comments. #ProTip"
+    },
+    {
+      "category": "Wesbos",
+      "text": "In JavaScript, everything is either an object or undefined. #JSFacts"
+    },
+    {
+      "category": "SystemDesign",
+      "text": "Good system design starts with understanding the problem. #SystemDesign"
+    },
+    {
+      "category": "SystemDesign",
+      "text": "Scalability is not an afterthought; design for it from the start. #TechTips"
+    },
+    {
+      "category": "SystemDesign",
+      "text": "A well-designed system is flexible, scalable, and easy to maintain. #Architecture"
+    },
+    {
+      "category": "SystemDesign",
+      "text": "Think in terms of components and their interactions. #DesignPatterns"
+    },
+    {
+      "category": "SystemDesign",
+      "text": "Design for failure: Plan for what happens when things go wrong. #Resilience"
+    },
+    {
+      "category": "SystemDesign",
+      "text": "Simple designs are often the best designs. #KeepItSimple"
+    },
+    {
+      "category": "SystemDesign",
+      "text": "Load balancing is key to handling high traffic smoothly. #ScaleUp"
+    },
+    {
+      "category": "SystemDesign",
+      "text": "Decouple components to reduce dependencies and increase flexibility. #Microservices"
+    },
+    {
+      "category": "SystemDesign",
+      "text": "Understand your data flows to optimize system performance. #DataDesign"
+    },
+    {
+      "category": "SystemDesign",
+      "text": "Design systems that are easy to monitor and debug. #Observability"
+    },
+    {
+      "category": "Motivation",
+      "text": "Believe you can and you're halfway there. #MotivationMonday"
+    },
+    {
+      "category": "Motivation",
+      "text": "Every day is a new opportunity to grow and be better. #KeepGoing"
+    },
+    {
+      "category": "Motivation",
+      "text": "Dream big, work hard, stay focused, and surround yourself with good people. #Success"
+    },
+    {
+      "category": "Motivation",
+      "text": "Your only limit is your mind. #StayPositive"
+    },
+    {
+      "category": "Motivation",
+      "text": "Start where you are. Use what you have. Do what you can. #Inspiration"
+    },
+    {
+      "category": "Motivation",
+      "text": "The harder you work for something, the greater you'll feel when you achieve it. #Goals"
+    },
+    {
+      "category": "Motivation",
+      "text": "Don't watch the clock; do what it does. Keep going. #NeverGiveUp"
+    },
+    {
+      "category": "Motivation",
+      "text": "Believe in yourself and all that you are. #SelfLove"
+    },
+    {
+      "category": "Motivation",
+      "text": "The best time for new beginnings is now. #TakeAction"
+    },
+    {
+      "category": "Motivation",
+      "text": "Turn your dreams into plans and your plans into actions. #DreamBig"
+    },
+    {
+      "category": "FactsAndFigures",
+      "text": "Did you know? The average person walks the equivalent of five times around the world in their lifetime. #Fact"
+    },
+    {
+      "category": "FactsAndFigures",
+      "text": "The world's oldest piece of chewing gum is over 9,000 years old. #FunFact"
+    },
+    {
+      "category": "FactsAndFigures",
+      "text": "Bananas are berries, but strawberries aren't. #FoodFacts"
+    },
+    {
+      "category": "FactsAndFigures",
+      "text": "Octopuses have three hearts and blue blood. #MarineBiology"
+    },
+    {
+      "category": "FactsAndFigures",
+      "text": "Honey never spoils. Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still edible. #History"
+    },
+    {
+      "category": "FactsAndFigures",
+      "text": "There are more stars in the universe than grains of sand on all the world's beaches. #SpaceFacts"
+    },
+    {
+      "category": "FactsAndFigures",
+      "text": "A single cloud can weigh more than a million pounds. #Weather"
+    },
+    {
+      "category": "FactsAndFigures",
+      "text": "The Eiffel Tower can be 15 cm taller during the summer, due to thermal expansion of the metal. #Engineering"
+    },
+    {
+      "category": "FactsAndFigures",
+      "text": "The shortest war in history lasted just 38 minutes. #History"
+    },
+    {
+      "category": "FactsAndFigures",
+      "text": "Humans share 60% of their DNA with bananas. #Genetics"
+    },
+    {
+      "category": "MobileTech",
+      "text": "5G is set to revolutionize mobile connectivity with lightning-fast speeds. #MobileTech"
+    },
+    {
+      "category": "MobileTech",
+      "text": "Your smartphone has more computing power than the computers used for the Apollo 11 moon landing. #TechTrivia"
+    },
+    {
+      "category": "MobileTech",
+      "text": "Mobile payments are the future of commerce. #FinTech"
+    },
+    {
+      "category": "MobileTech",
+      "text": "Foldable phones are the latest innovation in smartphone design. #TechTrends"
+    },
+    {
+      "category": "MobileTech",
+      "text": "The average person checks their phone 58 times a day. #MobileUsage"
+    },
+    {
+      "category": "MobileTech",
+      "text": "Augmented Reality (AR) is transforming mobile gaming and apps. #AR"
+    },
+    {
+      "category": "MobileTech",
+      "text": "Battery life is still the number one concern for smartphone users. #TechFacts"
+    },
+    {
+      "category": "MobileTech",
+      "text": "Mobile AI assistants are getting smarter every day. #AI"
+    },
+    {
+      "category": "MobileTech",
+      "text": "Smartphones are becoming essential tools for remote work. #TechInWork"
+    },
+    {
+      "category": "MobileTech",
+      "text": "Mobile security is crucial as more personal data is stored on phones. #CyberSecurity"
+    },
+    {
+      "category": "RealLife",
+      "text": "Life is what happens when you're busy making other plans. #JohnLennon"
+    },
+    {
+      "category": "RealLife",
+      "text": "The only impossible journey is the one you never begin. #TonyRobbins"
+    },
+    {
+      "category": "RealLife",
+      "text": "Happiness is not by chance, but by choice. #JimRohn"
+    },
+    {
+      "category": "RealLife",
+      "text": "Life is short, and it's up to you to make it sweet. #SarahLouiseDelany"
+    },
+    {
+      "category": "RealLife",
+      "text": "Do not watch the clock. Do what it does. Keep going. #SamLevenson"
+    },
+    {
+      "category": "RealLife",
+      "text": "The purpose of life is not to be happy. It is to be useful. #RalphWaldoEmerson"
+    },
+    {
+      "category": "RealLife",
+      "text": "Life is 10% what happens to us and 90% how we react to it. #CharlesRSwindoll"
+    },
+    {
+      "category": "RealLife",
+      "text": "In the end, we only regret the chances we didn't take. #LewisCarroll"
+    },
+    {
+      "category": "RealLife",
+      "text": "Life isn't about finding yourself. It's about creating yourself. #GeorgeBernardShaw"
+    },
+    {
+      "category": "RealLife",
+      "text": "The best way to predict the future is to create it. #PeterDrucker"
+    },
+    {
+      "category": "Android",
+      "text": "Jetpack Compose makes building UIs intuitive and fast. #AndroidDev"
+    },
+    {
+      "category": "Android",
+      "text": "Kotlin is now the preferred language for Android development. #Kotlin"
+    },
+    {
+      "category": "Android",
+      "text": "Android Studio provides powerful tools for building and testing apps. #DevTools"
+    },
+    {
+      "category": "Android",
+      "text": "Embrace modular architecture for scalable and maintainable Android apps. #Architecture"
+    },
+    {
+      "category": "Android",
+      "text": "Stay updated with the latest AndroidX libraries for enhanced functionality. #AndroidX"
+    },
+    {
+      "category": "Android",
+      "text": "Optimize your app’s performance with Android Profiler. #Performance"
+    },
+    {
+      "category": "Android",
+      "text": "Use WorkManager to handle background tasks efficiently. #BackgroundTasks"
+    },
+    {
+      "category": "Android",
+      "text": "Implement dark mode to enhance user experience in low-light environments. #DarkMode"
+    },
+    {
+      "category": "Android",
+      "text": "Secure your app with best practices for data encryption and user privacy. #Security"
+    },
+    {
+      "category": "Android",
+      "text": "Leverage Google Play Console for insights and app management. #AppDistribution"
+    },
+    {
+      "category": "Google",
+      "text": "Search on! Discover the world’s information at your fingertips. #GoogleSearch"
+    },
+    {
+      "category": "Google",
+      "text": "Stay connected, stay informed with Google News. #News"
+    },
+    {
+      "category": "Google",
+      "text": "Explore the world from your living room with Google Earth. #Maps"
+    },
+    {
+      "category": "Google",
+      "text": "Productivity meets simplicity with Google Workspace. #WorkSmart"
+    },
+    {
+      "category": "Google",
+      "text": "Translate the world around you with Google Translate. #Language"
+    },
+    {
+      "category": "Google",
+      "text": "Unlock the power of data with Google Cloud. #CloudComputing"
+    },
+    {
+      "category": "Google",
+      "text": "Your security, our priority. Protect your privacy with Google. #Privacy"
+    },
+    {
+      "category": "Google",
+      "text": "Stay ahead with AI-powered insights from Google. #ArtificialIntelligence"
+    },
+    {
+      "category": "Google",
+      "text": "Connect, create, and collaborate with Google Meet. #RemoteWork"
+    },
+    {
+      "category": "Google",
+      "text": "Empower your business with Google Ads. #DigitalMarketing"
+    },
+    {
+      "category": "AI",
+      "text": "AI is transforming industries, one algorithm at a time. #ArtificialIntelligence"
+    },
+    {
+      "category": "AI",
+      "text": "Machine learning: Teaching computers to think like humans. #ML"
+    },
+    {
+      "category": "AI",
+      "text": "AI can analyze data faster and more accurately than ever before. #BigData"
+    },
+    {
+      "category": "AI",
+      "text": "From self-driving cars to smart assistants, AI is the future. #Innovation"
+    },
+    {
+      "category": "AI",
+      "text": "AI isn't just about robots; it's about smarter solutions. #Tech"
+    },
+    {
+      "category": "AI",
+      "text": "Deep learning: Unlocking the mysteries of the human brain. #DeepLearning"
+    },
+    {
+      "category": "AI",
+      "text": "AI ethics: Ensuring technology serves humanity responsibly. #Ethics"
+    },
+    {
+      "category": "AI",
+      "text": "The future of healthcare is AI-powered diagnostics and treatments. #HealthTech"
+    },
+    {
+      "category": "AI",
+      "text": "AI in cybersecurity: Predicting and preventing threats. #CyberSecurity"
+    },
+    {
+      "category": "AI",
+      "text": "Natural language processing: Making human-computer interaction seamless. #NLP"
+    },
+    {
+      "category": "FamousAuthors",
+      "text": "“The only way to do great work is to love what you do.” – Steve Jobs"
+    },
+    {
+      "category": "FamousAuthors",
+      "text": "“In the end, we will remember not the words of our enemies, but the silence of our friends.” – Martin Luther King Jr."
+    },
+    {
+      "category": "FamousAuthors",
+      "text": "“You only live once, but if you do it right, once is enough.” – Mae West"
+    },
+    {
+      "category": "FamousAuthors",
+      "text": "“The greatest glory in living lies not in never falling, but in rising every time we fall.” – Nelson Mandela"
+    },
+    {
+      "category": "FamousAuthors",
+      "text": "“The only limit to our realization of tomorrow will be our doubts of today.” – Franklin D. Roosevelt"
+    },
+    {
+      "category": "FamousAuthors",
+      "text": "“The future belongs to those who believe in the beauty of their dreams.” – Eleanor Roosevelt"
+    },
+    {
+      "category": "FamousAuthors",
+      "text": "“Success is not final, failure is not fatal: It is the courage to continue that counts.” – Winston Churchill"
+    },
+    {
+      "category": "FamousAuthors",
+      "text": "“Life is what happens when you're busy making other plans.” – Allen Saunders"
+    },
+    {
+      "category": "FamousAuthors",
+      "text": "“Believe you can and you're halfway there.” – Theodore Roosevelt"
+    },
+    {
+      "category": "FamousAuthors",
+      "text": "“To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.” – Ralph Waldo Emerson"
+    }
+  ]
+}

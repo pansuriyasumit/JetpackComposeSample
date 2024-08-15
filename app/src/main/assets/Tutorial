@@ -1,0 +1,12 @@
+Video - 4
+
+** Problem Statement **
+
+==> Exercise 1: Validate Password
+    1. Should not be empty
+    2. Length should between 6 & 15
+    3. Otherwise, return the valid password
+
+==> Exercise 2: String Reversal
+    1. Should not be empty
+    2. Validate Reverse String "ABC" -> "CBA"
