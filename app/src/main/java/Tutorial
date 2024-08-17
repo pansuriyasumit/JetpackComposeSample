@@ -10,3 +10,36 @@ Example:
 ** finishActivity(int requestCode) **
 Purpose: Closes an Activity that was started using startActivityForResult().
 Behavior: You pass the requestCode that was used when starting the Activity. This allows you to target a specific Activity to close.
+
+**** Test Case Types ****
+1. Local Unit Tests: (test Folder)
+    These tests run on your local machine's JVM and don't require an Android device or emulator.
+    They are typically used to test isolated parts of your code, like ViewModels or utility classes,
+    without Android dependencies.
+
+2. Instrumented Tests: (androidTest Folder)
+    These tests run on an Android device or emulator and can interact with the Android system.
+    They are used to test components that depend on the Android framework, like Activities, Fragments, or Services.
+
+==> Run Test Cases using Command Line:
+    1. Command line:
+        If you're running tests from the command line, make sure you're using the appropriate Gradle task.
+         Use [./gradlew test] for local unit tests
+         and [./gradlew connectedAndroidTest] for instrumented tests.
+
+**** Notes For Tests Case ****
+NOTE 1:
+     If your test class or any of its methods are annotated with @RunWith(AndroidJUnit4::class),
+     it indicates that it's an instrumented test. Remove this annotation if you intend to run it as a local unit test.
+
+NOTE 2:
+    Make sure you're not using any Android dependencies in your local unit tests that would require instrumentation.
+    If you need to test interactions with Android components, consider using mocks or fakes
+    in your local unit tests or move those tests to the instrumented test suite.
+
+NOTE 3:
+    Sometimes, cleaning and rebuilding your project can help resolve issues with test configurations.
+
+NOTE 4:
+    If you're using any third-party libraries, make sure they are compatible with your testing setup
+    and don't introduce any conflicts.

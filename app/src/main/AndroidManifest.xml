@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".JetpackLibApp"
         android:allowBackup="true"
@@ -11,12 +14,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.App.Starting"
+        android:theme="@style/Theme.JetpackSampleLibrary"
         tools:targetApi="31">
         <activity
-            android:name=".screens.splash.SplashScreeActivity"
+            android:name=".screens.main.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.App.Starting">
+            android:theme="@style/Theme.JetpackSampleLibrary">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,4 +1,4 @@
-package com.fifteen11.jetpackcomposesample
+package com.fifteen11.jetpacksamplelibrary
 
 import org.junit.Test
 

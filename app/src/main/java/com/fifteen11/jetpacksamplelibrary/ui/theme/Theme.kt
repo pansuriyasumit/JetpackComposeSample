@@ -10,6 +10,11 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.unit.sp
+import com.fifteen11.jetpacksamplelibrary.R
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
@@ -31,6 +36,12 @@ private val LightColorScheme = lightColorScheme(
     onBackground = Color(0xFF1C1B1F),
     onSurface = Color(0xFF1C1B1F),
     */
+)
+val ProblemCardTitle = TextStyle(
+    fontFamily = FontFamily(Font(R.font.lato_bold)),
+    letterSpacing = 1.sp,
+    fontSize = 18.sp,
+    color = PrimaryColor
 )
 
 @Composable

@@ -17,7 +17,7 @@ class SplashScreenViewModel @Inject constructor() : ViewModel() {
 
     init {
         viewModelScope.launch {
-            delay(500L) // Simulate loading for N second
+            delay(1000L) // Simulate loading for N second
             _isSplashLoading.value = false
         }
     }
