@@ -2,6 +2,7 @@
 <resources>
 
     <style name="Theme.JetpackSampleLibrary" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.LaunchTheme" parent="Theme.AppCompat.Light.NoActionBar" />
 
     <style name="Theme.App.Starting" parent="Theme.SplashScreen.IconBackground">
         <item name="windowSplashScreenBackground">@color/white</item>

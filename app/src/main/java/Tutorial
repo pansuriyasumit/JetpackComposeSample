@@ -10,3 +10,41 @@ Example:
 ** finishActivity(int requestCode) **
 Purpose: Closes an Activity that was started using startActivityForResult().
 Behavior: You pass the requestCode that was used when starting the Activity. This allows you to target a specific Activity to close.
+
+--------------------------------------------------------------------------------
+
+** MOCKING **
+
+=> What is needs of Mocking?
+
+-> In OOP language we have different class to solve 1 problem.
+We have different object which are interact internally to solve the problem.
+
+-> Classes like Simple class, Util class which have functions. So we can easily test this type of class
+-> But we have some other class like Domain Class, Business Logic Class which are internally interacting to each other.
+    Now I want to test one Unit Test but we can't test it individually. [Unit Test requirement is that, must to test in isolation mode only]
+    No external dependency of other class or function to perform Unit Test, otherwise it will failed. And failed reason must be only one.
+
+-> So For that we will create a Mock Object or Fake Object.
+
+=> Benefits of Mocking
+
+1. Deterministic Output -> Our Test cases will be reliable.
+2. Improved execution speed -> If Our actual function get data from network or database, instead of that we will use the Mock Data of Fake Data.
+3. Parallel Development -> For example our dependent classes are not ready for testing and we will create a Mock Data and based on that we will write a test cases and make ready unit.
+
+NOTE: In Kotlin, by default all the classes are final. An final class can't test with the Mockito.
+SOLUTION for to test final classes with Mockito is:
+    1. Go to root directory of [test] directory of the project
+    2. Create a new folder. [resources]
+    3. Create a new folder. [mockito-extensions]
+    4. Create a new file. [org.mockito.plugins.MockMaker]
+    5. Add 1 line in this file. [mock-maker-inline]
+
+Using this solution we can test our final class also.
+
+--------------------------------------------------------------------------------
+
+** Coroutine Testing **
+
+

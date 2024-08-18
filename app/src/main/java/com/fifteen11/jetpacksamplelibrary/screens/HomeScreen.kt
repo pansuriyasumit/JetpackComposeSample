@@ -8,6 +8,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -25,7 +26,7 @@ fun HomeScreen(navController: NavHostController) {
         Text(
             text = "Welcome to Home Screen",
             style = TextStyle(
-                color = MaterialTheme.colorScheme.onSecondary,
+                color = Color.Red,
                 fontSize = 24.sp,
                 fontStyle = FontStyle.Italic,
                 fontWeight = FontWeight.SemiBold

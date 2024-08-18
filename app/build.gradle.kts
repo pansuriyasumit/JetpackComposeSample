@@ -68,11 +68,20 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.material)
-    testImplementation(libs.junit)
+
+    testImplementation(libs.junit) //JUnit
+    testImplementation(libs.androidx.core.testing) //Core Testing
+    testImplementation(libs.mockito.core) //Mockito for test mock data
+    testImplementation(libs.mockito.kotlin) //Mockito for Kotlin
+    testImplementation(libs.kotlinx.coroutines.test) //Testing for Coroutines in Kotlin
+
     androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.androidx.junit.ktx)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
+    androidTestImplementation(libs.androidx.espresso.core) //Espresso for Android UI Testing
+    androidTestImplementation(libs.androidx.espresso.intents) //Espresso Intent for Android UI Testing with Intent
+    androidTestImplementation(libs.androidx.core.testing) //Core Testing for Android
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
@@ -91,4 +100,17 @@ dependencies {
 
     //NAVIGATION
     implementation(libs.androidx.navigation.compose)
+
+    //GSON
+    implementation(libs.gson)
+
+    //ROOM
+    implementation(libs.androidx.room.runtime)
+    annotationProcessor(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)//KTX Extensions/Coroutines for Room
+    ksp(libs.androidx.room.compiler)
+    testImplementation(libs.room.testing) //Testing Room Database features
+    androidTestImplementation(libs.room.testing) //Testing Room Database features
+
+
 }
