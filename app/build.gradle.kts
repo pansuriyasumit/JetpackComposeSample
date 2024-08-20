@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.dagger.hilt.android)
     alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.kotlin.ksp)
+    alias(libs.plugins.kotlin.parcelize)
 }
 
 android {
@@ -18,7 +19,8 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        //testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.fifteen11.jetpacksamplelibrary.CustomRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -40,6 +42,7 @@ android {
     }
     kotlinOptions {
         jvmTarget = "18"
+        freeCompilerArgs = listOf("-Xjvm-default=all")
     }
 
     buildFeatures {
@@ -53,6 +56,15 @@ android {
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
+
+    sourceSets {
+        getByName("androidTest") {
+            java.srcDirs("src/sharedTest/java")
+        }
+        getByName("test") {
+            java.srcDirs("src/sharedTest/java")
         }
     }
 }
@@ -74,6 +86,9 @@ dependencies {
     testImplementation(libs.mockito.core) //Mockito for test mock data
     testImplementation(libs.mockito.kotlin) //Mockito for Kotlin
     testImplementation(libs.kotlinx.coroutines.test) //Testing for Coroutines in Kotlin
+    //testImplementation(libs.mockwebserver) //For testing Retrofit API calls and Create a Mock Web Server
+    testImplementation("com.google.dagger:hilt-android-testing:2.52") // Hilt Dependency Injection Testing
+    kaptTest("com.google.dagger:hilt-android-compiler:2.51.1") // Hilt Dependency Injection Testing
 
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.junit.ktx)
@@ -82,8 +97,11 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core) //Espresso for Android UI Testing
     androidTestImplementation(libs.androidx.espresso.intents) //Espresso Intent for Android UI Testing with Intent
     androidTestImplementation(libs.androidx.core.testing) //Core Testing for Android
+    androidTestImplementation("com.google.dagger:hilt-android-testing:2.52") // Hilt Dependency Injection Testing
+    androidTestImplementation("app.cash.turbine:turbine:1.1.0") //Turbine is for testing Flow when we use Coroutines and flow is continuously emitting data
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.51.1") // Hilt Dependency Injection Testing
 
     //SPLASHSCREEN
     implementation(libs.androidx.core.splashscreen)
@@ -112,5 +130,21 @@ dependencies {
     testImplementation(libs.room.testing) //Testing Room Database features
     androidTestImplementation(libs.room.testing) //Testing Room Database features
 
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-moshi:2.11.0")
 
+    // Moshi for JSON parsing
+    implementation("com.squareup.moshi:moshi:1.15.1")
+    implementation("com.squareup.moshi:moshi-kotlin:1.15.1")
+
+    // OkHttp
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
+    // MockWebServer for testing
+    testImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
+
+    //GLIDE
+    implementation(libs.glide)
+    annotationProcessor(libs.compiler)
 }

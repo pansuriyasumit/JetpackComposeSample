@@ -3,9 +3,13 @@ package com.fifteen11.jetpacksamplelibrary.quotes.data.local
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
+import app.cash.turbine.test
 import com.fifteen11.jetpacksamplelibrary.getOrAwaitValue
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import org.junit.After
 import org.junit.Assert.*
@@ -24,7 +28,7 @@ import javax.inject.Inject
  * For that, room database has 1 provision where we can create a in-memory database.
  */
 @HiltAndroidTest
-class QuoteDaoTest {
+class QuoteDaoFlowTest {
 
     /**
      * InstantTaskExecutorRule is a JUnit rule that configures LiveData to execute each task synchronously on the calling thread.
@@ -58,42 +62,38 @@ class QuoteDaoTest {
         val quote = QuoteEntity(0, "This is a test quote", "Test")
         quoteDao.insertQuote(quote)
 
-        //Here, getQuotes() return the LiveData and block the current thread until the LiveData is updated.
-        val result = quoteDao.getQuotes().getOrAwaitValue()
+        val result = quoteDao.getQuotesUsingFlow().first()
 
         assertEquals(1, result.size)
         assertEquals("This is a test quote", result[0].text)
     }
 
     @Test
-    fun deleteQuote_expectedNoResults() = runBlocking {
+    fun insertQuote_expectedSingleQuote_with_Turbine() = runBlocking {
         val quote = QuoteEntity(0, "This is a test quote", "Test")
-        quoteDao.insertQuote(quote)
-        quoteDao.deleteAllQuotes()
+        val quote2 = QuoteEntity(0, "This is a test quote Two", "Test Fifteen11")
 
-        val result = quoteDao.getQuotes().getOrAwaitValue()
-        assertEquals(0, result.size)
-    }
-
-    @Test
-    fun updateQuote_expected() = runBlocking {
-        val quote = QuoteEntity(0, "This is a test quote", "Test")
         quoteDao.insertQuote(quote)
 
-        quoteDao.updateQuote(QuoteEntity(1, "This is a test quote updated", "Test"))
+        //Here, first quote one is insert and after 500 millisecond, second quote is insert.
+        launch {
+            delay(500L)
+            quoteDao.insertQuote(quote2)
+        }
 
-        val result = quoteDao.getQuotes().getOrAwaitValue()
-        assertEquals(1, result.size)
-        assertEquals("This is a test quote updated", result[0].text)
-    }
+        //Turbine is for testing Flow when we use Coroutines and flow is continuously emitting data
+        val result = quoteDao.getQuotesUsingFlow().test {
 
-    @Test
-    fun testQuoteById_expected() = runBlocking {
-        val quote = QuoteEntity(0, "This is a test quote", "Test")
-        quoteDao.insertQuote(quote)
+            val quoteList = awaitItem() // This function will wait for the first emission of the flow and store it in quoteList
+            assertEquals(1, quoteList.size)
+            assertEquals("This is a test quote", quoteList[0].text)
 
-        val result = quoteDao.getQuoteById(1)
-        assertEquals("This is a test quote", result.text)
+            val quoteList2 = awaitItem() // This function will wait for the second emission of the flow and store it in quoteList2
+            assertEquals(2, quoteList2.size)
+            assertEquals("This is a test quote Two", quoteList2[1].text)
+
+            cancel() // This function will cancel the flow and consume all remaining events
+        }
     }
 
     @After

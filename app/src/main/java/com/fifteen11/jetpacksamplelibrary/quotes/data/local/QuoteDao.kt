@@ -5,6 +5,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
+import kotlinx.coroutines.flow.Flow
 
 /**
  * For Room Database Testing we required Context, So it will be in Instrumentation Test, [androidTest] Directory.
@@ -23,6 +24,10 @@ interface QuoteDao {
 
     @Query("SELECT * FROM quotes")
     fun getQuotes(): LiveData<List<QuoteEntity>>
+
+    @Query("SELECT * FROM quotes")
+    fun getQuotesUsingFlow(): Flow<List<QuoteEntity>>
+
 
     @Query("SELECT * FROM quotes WHERE id = :quoteId")
     suspend fun getQuoteById(quoteId: Int): QuoteEntity
